@@ -31,3 +31,11 @@ spec:
             httpGet:
               path: /
               port: http
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: html-volume
+          hostPath:
+            path: /data/nginx
+            type: Directory
