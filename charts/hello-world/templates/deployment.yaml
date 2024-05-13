@@ -31,11 +31,11 @@ spec:
             httpGet:
               path: /
               port: http
+        - name: redis
+          image: redis
           volumeMounts:
-            - name: html-volume
-              mountPath: /usr/share/nginx/html
+            - name: data
+              mountPath: /data
       volumes:
-        - name: html-volume
-          hostPath:
-            path: /data/nginx
-            type: Directory
+        - name: data
+          emptyDir: {}  
