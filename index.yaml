@@ -3,7 +3,17 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-13T14:14:06.01131+02:00"
+    created: "2024-05-13T14:26:29.057855+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c49e56d75ae92bbbe5d22a0821b60a138535cfa2f9d8b6443889e78cab82c605
+    name: hello-world
+    type: application
+    urls:
+    - https://fiscafusca.github.io/helm-examples/packages/hello-world-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-05-13T14:26:29.057628+02:00"
     description: A Helm chart for Kubernetes
     digest: 23782297a419685ec5a8184033979a9fddbe4827ef7bcbf64ede40672350beff
     name: hello-world
@@ -13,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-13T14:14:06.011106+02:00"
+    created: "2024-05-13T14:26:29.057171+02:00"
     description: A Helm chart for Kubernetes
     digest: e518d9c210207248f5712755d67f8487523ebc513e3c08e4ebe6c240b027f98f
     name: hello-world
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://fiscafusca.github.io/helm-examples/packages/hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-13T14:14:06.010684+02:00"
+generated: "2024-05-13T14:26:29.056435+02:00"
