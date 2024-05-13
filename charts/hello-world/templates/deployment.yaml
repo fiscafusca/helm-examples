@@ -36,7 +36,14 @@ spec:
           volumeMounts:
             {{- if .Values.redis.enabled }}
             - name: data
-              mountPath: /data
+              mountPath: /data/redis
+              subPath: redisData
+            - name: data
+              mountPath: /data/tmp
+              subPath: tmpData
+            - name: data
+              mountPath: /data/logs
+              subPath: logsData
             {{- end }}
       volumes:
         - name: data
