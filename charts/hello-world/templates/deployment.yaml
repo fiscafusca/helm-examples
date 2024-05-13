@@ -34,8 +34,10 @@ spec:
         - name: redis
           image: redis
           volumeMounts:
+            {{- if .Values.redis.enabled }}
             - name: data
               mountPath: /data
+            {{- end }}
       volumes:
         - name: data
           emptyDir: {}  
