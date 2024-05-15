@@ -1,5 +1,5 @@
 {{- if .Values.cron.enabled -}}
-apiVersion: "stable.example.com/v1"
+apiVersion: "stable.example.com/v2"
 kind: CronTab
 metadata:
   name: cron
