@@ -28,3 +28,6 @@ service:
 
 redis:
   enabled: true
+
+cron:
+  enabled: true
