@@ -1,3 +1,5 @@
+{{- $initContainerEnabled := default (printf "") .Values.initContainer.image -}}
+{{- if ne $initContainerEnabled "" -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
