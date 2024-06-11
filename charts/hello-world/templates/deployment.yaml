@@ -15,6 +15,11 @@ spec:
         {{- include "hello-world.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "hello-world.serviceAccountName" . }}
+      initContainers:
+      {{- if ne $initContainerEnabled "" }}
+        - name: "init"
+          image: "{{ $initContainerEnabled }}"
+      {{ end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
