@@ -1,5 +1,4 @@
-{{- $initContainerEnabled := default (printf "") .Values.initContainer.image -}}
-{{- if ne $initContainerEnabled "" -}}
+{{- $initContainerEnabled := default (printf "") .Values.init -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,7 +19,7 @@ spec:
       initContainers:
       {{- if ne $initContainerEnabled "" }}
         - name: "init"
-          image: "{{ $initContainerEnabled }}"
+          image: "{{ .Values.initContainer.image }}"
       {{ end }}
       containers:
         - name: {{ .Chart.Name }}
